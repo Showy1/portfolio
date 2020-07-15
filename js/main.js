@@ -10,9 +10,10 @@ $(function(){
     return false;
   });
 
-  $('button').click(function(){
+  // $('button').click(function(){
+  $('form').submit(function(){
     // $('#thxMessage').addClass("show");
-    $(this).hide();
+    $('button').hide();
     $('#thxMessage').fadeIn(1000);
   });
 
