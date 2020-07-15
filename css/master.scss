@@ -186,6 +186,24 @@ main{
             }
           }
         }
+
+        iframe{
+          display: none;
+        }
+
+        #thxMessage{
+          display: none;
+          width: 300px;
+          background: #fff;
+          border: $base-script-color 2px solid;
+          border-radius: 20px;
+          padding: 20px;
+          margin: 0 auto;
+          text-align: center;
+          p{
+            margin: 0;
+          }
+        }
       }
     }
   }
@@ -213,7 +231,6 @@ main{
 
 @media(max-width: $phone-width){
   header{
-    height: 100vh;
     background-color: transparent;
     transition: .5s;
 
@@ -240,7 +257,7 @@ main{
       overflow: hidden;
 
       header{
-
+        height: 100vh;
         backdrop-filter: blur(8px);
 
         i{

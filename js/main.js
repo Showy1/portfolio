@@ -10,6 +10,12 @@ $(function(){
     return false;
   });
 
+  $('button').click(function(){
+    // $('#thxMessage').addClass("show");
+    $(this).hide();
+    $('#thxMessage').fadeIn(1000);
+  });
+
   $('#hamburger').click(function(){
     $("body").addClass("show");
   })

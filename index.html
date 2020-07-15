@@ -89,7 +89,7 @@
           <section class="contact" id="contact">
             <h2>contanct</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil illo, blanditiis atque, illum ex perspiciatis cumque, delectus corporis error odio iusto. Recusandae in, commodi nisi non sed alias nobis neque!</p>
-            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSezJA7s9Y4gL2rp_0q0KqgcXL-Oz_3Fxh9YSuK_v3Bvr7ylRw/formResponse">
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSezJA7s9Y4gL2rp_0q0KqgcXL-Oz_3Fxh9YSuK_v3Bvr7ylRw/formResponse" target="dummyIframe">
               <p><label for="name">お名前</label></p>
               <p><input id="name" type="text" name="entry.2123806843" placeholder="山田太郎" required></p>
               <p><label for="email">メールアドレス</label></p>
@@ -98,6 +98,11 @@
               <p><textarea id="msg" name="entry.1322800770" placeholder="お気軽にお問い合わせください。" required></textarea></p>
               <p><button type="submit" name="button" value="送信">送信</button></p>
             </form>
+            <iframe name="dummyIframe"></iframe>
+            <div id="thxMessage" class="modal">
+              <p>お問い合わせありがとうございます。</p>
+              <p>3日以内に返信いたします。</p>
+            </div>
           </div>
         </section>
       </div>
