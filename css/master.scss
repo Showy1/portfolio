@@ -3,6 +3,7 @@ $phone-width: 560px;
 $tablet-width: 960px;
 $base-color: #658e5a;
 $base-script-color: #626343;
+$headline-font: 'Playfair Display', serif;
 
 *{
   margin: 0;
@@ -53,6 +54,7 @@ header{
       justify-content: flex-start;
 
       li{
+        font-family: $headline-font;
         padding: 0 10px;
       }
     }
@@ -72,14 +74,20 @@ main{
     align-items: center;
 
     &-content{
+      font-family: $headline-font;
       margin: 0 auto;
       text-align: center;
       padding: 10px;
       border-radius: 10px;
       color: #fff;
       backdrop-filter: blur(1px);
-      font-weight: bold;
       user-select: none;
+      h1{
+        font-size: 28px;
+      }
+      p{
+        font-size: 22px;
+      }
     }
   }
 
@@ -104,6 +112,7 @@ main{
         margin-bottom: 50px;
 
         h2{
+          font-family: $headline-font;
           text-align: center;
           padding: 10px;
         }
@@ -322,6 +331,7 @@ main{
 }
 
 footer{
+  font-family: $headline-font;
   height: 50px;
   line-height: 50px;
   background: #fff;
