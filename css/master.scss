@@ -95,11 +95,13 @@ main{
     background-image: url("../img/bg.jpg");
     background-attachment: fixed;
     width: 100%;
-    // height: 100%;
     background-position: center bottom;
     background-size: cover;
 
     .container{
+      *{
+        opacity: 0;
+      }
       width: 80%;
       max-width: $tablet-width;
       margin: 0 auto;

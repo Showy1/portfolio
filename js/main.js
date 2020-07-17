@@ -10,9 +10,18 @@ $(function(){
     return false;
   });
 
-  // $('button').click(function(){
+  $(window).scroll(function (){
+    $('*').each(function(){
+      var imgPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + 50){
+        $(this).animate({'opacity':'1'},500);
+      }
+    });
+  });
+
   $('form').submit(function(){
-    // $('#thxMessage').addClass("show");
     $('button').hide();
     $('#thxMessage').fadeIn(1000);
   });
