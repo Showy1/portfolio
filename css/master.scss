@@ -29,6 +29,42 @@ html{
   color: $base-script-color;
 }
 
+#loader{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 20;
+  animation: disappear 1s linear 1.5s 1 forwards;
+
+  &-icon{
+    position: fixed;
+    top: calc(50% - 120px/2);
+    left: calc(50% - 120px/2);
+    width: 120px;
+    height: 120px;
+    border: 14px solid #f3f3f3;
+    border-top: 14px solid $base-color;
+    border-radius: 50%;
+    animation: spin 1.3s linear 2;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes disappear {
+  100% {
+    opacity: 0;
+  }
+}
+
 header{
   z-index: 10;
   width: 100%;
@@ -36,10 +72,8 @@ header{
   height: 50px;
   line-height: 50px;
   user-select: none;
-  // backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.5);
   font-weight: bold;
-  // transition: .5s;
 
   i.fas{
     display: none;
