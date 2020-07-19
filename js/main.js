@@ -6,19 +6,33 @@ $(function(){
     var href= $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top;
-    $("html, body").animate({scrollTop:position}, speed, "swing");
+    $('html, body').animate({scrollTop:position}, speed, "swing");
     return false;
   });
 
+  var top = $('#top')
+  top.hide();
+
   $(window).scroll(function (){
-    $('*').each(function(){
+    var scroll = $(this).scrollTop();
+    var windowHeight = $(this).height();
+
+    if(scroll > 100){
+      top.fadeIn();
+    }else{
+      top.fadeOut();
+    }
+
+    $('.container').find('*').each(function(){
       var imgPos = $(this).offset().top;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + 50){
+      if(scroll > imgPos - windowHeight + 50){
         $(this).animate({'opacity':'1'},500);
       }
     });
+  });
+
+  top.click(function(){
+    $('html, body').animate({scrollTop: 0}, 500);
   });
 
   $('form').submit(function(){
