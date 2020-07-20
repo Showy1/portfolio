@@ -15,6 +15,7 @@ $headline-font: 'Playfair Display', serif;
 a{
   text-decoration: none;
   color: $base-script-color;
+  display: block;
 
   &:hover{
     opacity: 0.8;
@@ -26,7 +27,7 @@ ul{
 }
 
 html{
-  background-color: $base-color;
+  background-color: #fff;
   color: $base-script-color;
 }
 
@@ -89,30 +90,39 @@ html{
 }
 
 header{
-  z-index: 10;
-  width: 100%;
-  position: fixed;
-  height: 50px;
-  line-height: 50px;
-  user-select: none;
-  background-color: rgba(255, 255, 255, 0.5);
-  font-weight: bold;
-
-  i.fas{
-    display: none;
-    z-index: 11;
+  .header-dummy{
+    height: 50px;
+    background: #fff;
   }
 
-  nav{
-    padding-left: 90px;
+  .header-content{
+    z-index: 10;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    line-height: 50px;
+    user-select: none;
+    background-color: $transparent-white;
 
-    ul{
-      display: flex;
-      justify-content: flex-start;
+    i.fas{
+      display: none;
+      z-index: 11;
+    }
 
-      li{
-        font-family: $headline-font;
-        padding: 0 10px;
+    nav{
+      float: right;
+      padding-right: 50px;
+
+      ul{
+        display: flex;
+        justify-content: flex-start;
+
+        li{
+          font-family: $headline-font;
+          padding: 0 20px;
+          line-height: 50px;
+        }
       }
     }
   }
@@ -122,10 +132,11 @@ main{
 
   .mv{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 50px * 2);
     background-image: url("../img/mv.jpg");
     background-position: center top;
     background-size: cover;
+    margin-bottom: 50px;
 
     display: flex;
     align-items: center;
@@ -164,8 +175,6 @@ main{
       margin: 0 auto;
       background-color: $transparent-white;
       padding: 50px;
-      // position: relative;
-      // display: table;
 
       section{
         margin-bottom: 50px;
@@ -192,6 +201,7 @@ main{
             #myself{
               width: 300px;
               border-radius: 50%;
+              user-select: none;
             }
           }
 
@@ -299,58 +309,75 @@ main{
 
 @media(max-width: $phone-width){
   header{
-    background-color: transparent;
-    transition: .5s;
-
-    i.fas{
-      display: block;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-
-      &#close{
-        display: none;
-      }
+    .header-dummy{
+      display: none;
     }
+    .header-content{
+      height: 100vh;
+      background-color: transparent;
+      transition: .3s;
 
-    nav{
-      opacity: 0;
-      padding: 0;
+      i.fas{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+
+        &:hover{
+          opacity: 0.8;
+        }
+
+        &#close{
+          display: none;
+        }
+      }
+
+      nav{
+        display: none;
+        padding: 0;
+      }
     }
   }
 
   body{
+    .mv{
+      height: 100vh;
+      margin-bottom: 0;
+    }
+
     &.show{
       height: 100%;
       overflow: hidden;
 
       header{
-        height: 100vh;
-        backdrop-filter: blur(8px);
+        .header-content{
+          backdrop-filter: blur(8px);
 
-        i{
-          &#hamburger{
-            display: none;
+          i{
+            &#hamburger{
+              display: none;
+            }
+
+            &#close{
+              display: block;
+            }
           }
 
-          &#close{
+          nav{
             display: block;
-          }
-        }
+            float: none;
+            text-align: center;
 
-        nav{
-          opacity: 1;
-          transition: 1s;
-          display: block;
-          text-align: center;
+            ul{
+              display: block;
 
-          ul{
-            display: block;
-            align-items: center;
-
-            li{
-              font-weight: bold;
-              vertical-align: middle;
+              li{
+                margin: 25px 80px;
+                font-weight: bold;
+                font-size: 24px;
+                text-shadow: 2px 2px 8px #fff, -1px -1px 2px #fff;
+              }
             }
           }
         }
