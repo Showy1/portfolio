@@ -417,9 +417,22 @@ main{
 }
 
 footer{
-  font-family: $headline-font;
-  height: 50px;
-  line-height: 50px;
-  background: #fff;
-  text-align: center;
+  background: #eee;
+
+  .footer-link{
+    display: flex;
+    justify-content: center;
+
+    li{
+      margin: 30px;
+    }
+  }
+
+  p{
+    font-family: $headline-font;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
 }
