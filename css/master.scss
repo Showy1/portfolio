@@ -5,6 +5,7 @@ $base-color: #658e5a;
 $base-script-color: #626343;
 $transparent-white: rgba(255,255,255,0.5);
 $headline-font: 'Playfair Display', serif;
+$mv-font: 'Tangerine', cursive;
 
 *{
   margin: 0;
@@ -103,7 +104,7 @@ header{
     height: 50px;
     line-height: 50px;
     user-select: none;
-    background-color: $transparent-white;
+    background-color: rgba(255,255,255,0.7);
 
     i.fas{
       display: none;
@@ -142,19 +143,17 @@ main{
     align-items: center;
 
     &-content{
-      font-family: $headline-font;
+      font-family: $mv-font;
       margin: 0 auto;
       text-align: center;
-      padding: 10px;
-      border-radius: 10px;
       color: #fff;
-      backdrop-filter: blur(1px);
+      text-shadow: 1px 1px 2px #aaa;
       user-select: none;
       h1{
-        font-size: 28px;
+        font-size: 128px;
       }
       p{
-        font-size: 22px;
+        font-size: 82px;
       }
     }
   }
