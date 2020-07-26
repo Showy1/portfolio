@@ -1,7 +1,7 @@
 $(function(){
   "use strict";
 
-// Smooth Scrolling
+  // Smooth Scrolling
   $('a[href^="#"]').click(function(){
     var speed = 500;
     var href= $(this).attr("href");
@@ -11,12 +11,12 @@ $(function(){
     return false;
   });
 
-// Mouse Stalker
+  // Mouse Stalker
   // $('.mv').mousemove(function(e){
   //   $('#stalker').css('transform', 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)');
   // });
 
-// Scroll Top & FadeIn Scripts
+  // Scroll Top & FadeIn Scripts
   var top = $('#top')
   top.hide();
 
@@ -42,12 +42,13 @@ $(function(){
     $('html, body').animate({scrollTop: 0}, 500);
   });
 
-// Hamburger Menu
+  // Contact Form Change
   $('form').submit(function(){
     $('button').hide();
     $('#thxMessage').fadeIn(1000);
   });
 
+  // Hamburger Menu
   $('#hamburger').click(function(){
     $("body").addClass("show");
   })
