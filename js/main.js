@@ -42,6 +42,13 @@ $(function(){
     $('html, body').animate({scrollTop: 0}, 500);
   });
 
+  // slick
+  $('.slider').slick({
+    autoplay: true,
+    autoplaySpeed: 7000,
+    dots: true,
+  });
+
   // Contact Form Change
   $('form').submit(function(){
     $('button').hide();

@@ -12,10 +12,16 @@ $mv-font: 'Tangerine', cursive;
   background-repeat: no-repeat;
 }
 
+html{
+  background-color: #fff;
+  color: $base-script-color;
+}
+
 a{
   text-decoration: none;
   color: $base-script-color;
   display: block;
+  outline: none;
 
   &:hover{
     opacity: 0.8;
@@ -28,11 +34,6 @@ a{
 
 ul{
   list-style: none;
-}
-
-html{
-  background-color: #fff;
-  color: $base-script-color;
 }
 
 /* Loading */
@@ -57,12 +58,27 @@ html{
 //   }
 // }
 
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes disappear {
+  100% {
+    opacity: 0;
   }
 }
 
@@ -102,7 +118,10 @@ header{
     top: 0;
     height: 50px;
     line-height: 50px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     background-color: rgba(255,255,255,0.7);
 
     #logo{
@@ -171,7 +190,10 @@ main{
       text-align: center;
       color: #fff;
       text-shadow: 1px 1px 2px #aaa;
-      user-select: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
       h1{
         font-size: 128px;
       }
@@ -222,8 +244,10 @@ main{
             text-align: center;
             #myself{
               width: 300px;
-              // border-radius: 50%;
-              user-select: none;
+              -webkit-user-select: none;
+                 -moz-user-select: none;
+                  -ms-user-select: none;
+                      user-select: none;
             }
           }
 
@@ -250,7 +274,24 @@ main{
       }
 
       .works{
-        @extend .service;
+        // @extend .service;
+        ul{
+          text-align: center;
+          width: 60%;
+          margin: 0 auto;
+
+          li{
+            img{
+              width: 100%;
+            }
+
+            p{
+              text-align: justify;
+              text-justify: inter-ideograph;
+              padding: 10px;
+            }
+          }
+        }
       }
 
       .contact{
@@ -395,7 +436,8 @@ main{
 
       header{
         .header-content{
-          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+                  backdrop-filter: blur(8px);
 
           i{
             &#hamburger{
