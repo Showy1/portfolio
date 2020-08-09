@@ -294,6 +294,24 @@ main{
         }
       }
 
+      .skills{
+        ul{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          text-align: center;
+
+          li{
+            width: 250px;
+            margin: 20px;
+
+            p{
+
+            }
+          }
+        }
+      }
+
       .contact{
         p{
           margin-bottom: 20px;
