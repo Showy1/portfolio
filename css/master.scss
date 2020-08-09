@@ -1,10 +1,4 @@
-$base-width: 900px;
-$phone-width: 560px;
-$tablet-width: 960px;
-$base-color: #658e5a;
-$base-script-color: #626343;
-$headline-font: 'Playfair Display', serif;
-$mv-font: 'Tangerine', cursive;
+@import "parameters.scss";
 
 *{
   margin: 0;

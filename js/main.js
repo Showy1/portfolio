@@ -1,8 +1,12 @@
 $(function(){
   "use strict";
 
+  //include
+  $('#header').load('include/header.html');
+  $('#footer').load('include/footer.html');
+
   // Smooth Scrolling
-  $('a[href^="#"]').click(function(){
+  $(document).on('click', 'a[href^="#"]', function(){
     var speed = 500;
     var href= $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
@@ -56,10 +60,10 @@ $(function(){
   });
 
   // Hamburger Menu
-  $('#hamburger').click(function(){
+  $(document).on('click', '#hamburger', function(){
     $("body").addClass("show");
   })
-  $('#close, a[href^="#"]').click(function(){
+  $(document).on('click', '#close, a[href^="#"]', function(){
     $("body").removeClass("show");
   })
 });
