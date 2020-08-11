@@ -24,7 +24,24 @@ $(function(){
   var top = $('#top')
   top.hide();
 
-  $(window).scroll(function (){
+  // $(window).scroll(function (){
+  //   var scroll = $(this).scrollTop();
+  //   var windowHeight = $(this).height();
+  //
+  //   if(scroll > 100){
+  //     top.fadeIn();
+  //   }else{
+  //     top.fadeOut();
+  //   }
+  //
+  //   $('.container').find('*').each(function(){
+  //     var imgPos = $(this).offset().top;
+  //     if(scroll > imgPos - windowHeight + 50){
+  //       $(this).animate({'opacity':'1'},500);
+  //     }
+  //   });
+  // });
+  $(window).on('scroll load', function (){
     var scroll = $(this).scrollTop();
     var windowHeight = $(this).height();
 
@@ -46,11 +63,19 @@ $(function(){
     $('html, body').animate({scrollTop: 0}, 500);
   });
 
+  // Clone Outline
+  $('.outline').clone().removeClass('origin').appendTo('#outline_clone');
+
+  // Accordion
+  $(document).on('click', '.accordion', function(){
+    $('.accordion_inner').stop(true,true).slideToggle();
+  });
+
+
   // slick
   $('.slider').slick({
     autoplay: true,
     autoplaySpeed: 7000,
-    dots: true,
   });
 
   // Contact Form Change

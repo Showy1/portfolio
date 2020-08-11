@@ -1,128 +1,185 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Showy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="utf-8">
+  <title>Showy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- favicon -->
-    <link rel="icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <!-- favicon -->
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- css -->
-    <link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Tangerine&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/master.min.css">
-    <link rel="stylesheet" href="css/slick/slick.css" type="text/css">
-    <link rel="stylesheet" href="css/slick/slick-theme.css" type="text/css">
+  <!-- css -->
+  <link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Tangerine&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.min.css">
+  <link rel="stylesheet" href="css/slick/slick.css" type="text/css">
+  <link rel="stylesheet" href="css/slick/slick-theme.css" type="text/css">
 
-    <!-- js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <script src="js/main.js"></script>
-  </head>
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
 
-  <body>
-    <div id="loader">
-      <div id="loader-icon">
+<body>
+  <div id="loader">
+    <div id="loader-icon">
+    </div>
+  </div>
+
+  <div id="top">
+    <i class="fas fa-chevron-up fa-2x" id="top-icon"></i>
+  </div>
+
+  <div id="header"></div>
+
+  <main>
+    <section class="mv">
+      <!-- <div id="stalker"></div> -->
+      <div class="mv-content">
+        <h1>Showy</h1>
+        <p>Web Creator</p>
       </div>
-    </div>
+    </section>
 
-    <div id="top">
-      <i class="fas fa-chevron-up fa-2x" id="top-icon"></i>
-    </div>
-
-    <div id="header"></div>
-
-    <main>
-      <section class="mv">
-        <!-- <div id="stalker"></div> -->
-        <div class="mv-content">
-          <h1>Showy</h1>
-          <p>Web Creator</p>
-        </div>
-      </section>
-
-      <div class="bg">
-        <div class="container">
-          <section class="profile" id="profile">
-            <h2>profile</h2>
-            <div class="profile-inner">
-              <div class="pic">
-                <img id="myself" src="img/showyIcon.png" alt="showy">
+    <div class="bg">
+      <div class="container">
+        <section class="profile" id="profile">
+          <h2>profile</h2>
+          <div class="profile-inner">
+            <div class="pic">
+              <!-- <img id="myself" src="img/myphoto.png" alt="showy"> -->
+              <img id="myself" src="img/showyIcon.png" alt="showy">
+            </div>
+            <div class="info">
+              <div class="introduction">
+                <p>当サイトをご覧くださり、ありがとうございます。</p>
+                <p>WebエンジニアのShowyと申します。</p>
+                <p>お客様の潜在的なご要望にお応えするため、クライアントファーストを追求し、誠心誠意対応いたします。</p>
               </div>
-              <div class="info">
-                <h3>Showy</h3>
-                <p>1994年4月29日生まれ</p>
-                <!-- <p>大分県出身</p> -->
-                <ul>
-                  <li>2017年3月 東京工業大学 工学部電気電子工学科卒業</li>
-                  <li>2019年3月 東京工業大学 工学院電気電子系修了</li>
-                  <li>2019年4月 大手BtoBメーカー就職</li>
-                </ul>
+              <div class="outline origin">
+                <h3 id="name">Showy</h3>
+                <div class="outline-inner">
+                  <p>Webエンジニア</p>
+                  <p>大分県出身 / 東京都在住</p>
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+          <div id="outline_clone"></div>
+          <a class="btn" href="profile.html">more</a>
+        </section>
 
-          <section class="service" id="service">
-            <h2>service</h2>
+        <section class="service" id="service">
+          <h2>service</h2>
+          <ul>
+            <li>
+              <h3>コーディング</h3>
+              <i class="fas fa-code fa-5x"></i>
+              <p>お預かりしたデザインカンプをもとに、HTML / CSS / JavaScriptなどを用いて適切にコーディングいたします。また、コード修正なども対応いたします。</p>
+            </li>
+            <li>
+              <h3>LP制作</h3>
+              <i class="fas fa-file fa-5x"></i>
+              <p>お客様のご要望を伺った上で、デザインを含め、適切なLP（ランディングページ）を制作いたします。</p>
+            </li>
+            <li>
+              <h3>WPサイト制作</h3>
+              <i class="fab fa-wordpress fa-5x"></i>
+              <p>WordPressを用いてwebサイトを構築します。WordPress導入、テンプレートテーマおよびオリジナルテーマによるWordPressサイト制作など、対応いたします。</p>
+            </li>
+          </ul>
+          <div class="accordion_inner">
+            <h3>料金目安</h3>
             <ul>
               <li>
-                <h3>コーディング</h3>
-                <i class="fas fa-code fa-5x"></i>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque blanditiis, soluta vero accusamus modi enim ab rerum, odit non, nisi eligendi perspiciatis explicabo architecto neque quod recusandae vel, quos dolores.</p>
+                <dl>
+                  <dt>コード修正</dt>
+                  <dd>7,000円/1ページ 〜</dd>
+                  <dt>下層ページコーディング</dt>
+                  <dd>8,000円/1ページ 〜</dd>
+                  <dt>トップページコーディング</dt>
+                  <dd>12,000円/1ページ 〜</dd>
+                </dl>
               </li>
               <li>
-                <h3>webサイト制作</h3>
-                <i class="fas fa-laptop-code fa-5x"></i>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis totam doloremque dolores rem, soluta adipisci libero dicta natus minima ullam quia possimus asperiores iste, consequatur at nobis. Saepe odio, laudantium.</p>
-              </li>
-            </ul>
-          </section>
-
-          <section class="works" id="works">
-            <h2>works</h2>
-            <ul class="slider">
-              <li>
-                <h3>ポートフォリオサイト</h3>
-                <a href="#"><img src="img/works/portfolio.png" alt="showy_portfolio"></a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati enim accusamus magni ipsum sit quas alias dolorum pariatur blanditiis dicta perferendis quis iste, ipsam numquam deleniti quos voluptatibus doloremque, ullam?</p>
+                <dl>
+                  <dt>ランディングページ制作<br>（デザイン込み）</dt>
+                  <dd>40,000円/1ページ 〜</dd>
+                </dl>
               </li>
               <li>
-                <h3>デザインカンプからのコーディング</h3>
-                <a href="https://showy1.github.io/coding_digsmile/" target="_blank" rel="noopener noreferrer"><img src="img/works/coding_digsmile.png" alt="showy_coding_digsmile"></a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quidem odio minus corporis inventore ea sequi aliquam sapiente provident ad pariatur, exercitationem dolor quos, voluptatibus, culpa aperiam. Iste, repudiandae, neque!</p>
+                <dl>
+                  <dt>WordPress導入</dt>
+                  <dd>70,000円 〜</dd>
+                  <dt>テンプレートテーマ<br>Webページ制作</dt>
+                  <dd>150,000円 〜</dd>
+                  <dt>オリジナルテーマ<br>Webページ制作</dt>
+                  <dd>200,000円 〜</dd>
+                </dl>
               </li>
             </ul>
-          </section>
+            <div class="notes">
+              <p>上記金額は目安になります。正式なお見積もりは、別途ご相談にて、よろしくお願いいたします。</p>
+            </div>
+          </div>
+          <div class="btn accordion">料金目安</div>
+        </section>
 
-          <section class="skills" id="skills">
-            <h2>skills</h2>
-            <ul>
-              <li><i class="fab fa-html5 fa-7x"></i><p>HTML5</p></li>
-              <li><i class="fab fa-css3 fa-7x"></i><p>CSS3</p></li>
-              <li><i class="fab fa-sass fa-7x"></i><p>Sass</p></li>
-              <li><i class="fab fa-js-square fa-7x"></i><p>JavaScript/jQuery</p></li>
-              <li><i class="fab fa-php fa-7x"></i><p>PHP</p></li>
-              <li><i class="fab fa-wordpress fa-7x"></i><p>WordPress</p></li>
-              <li><i class="fas fa-database fa-7x"></i><p>MySQL</p></li>
-              <li><i class="fab fa-adobe fa-7x"></i><p>Photoshop/XD</p></li>
-              <li><i class="fab fa-github fa-7x"></i><p>GitHub</p></li>
-            </ul>
-          </section>
+        <section class="works" id="works">
+          <h2>works</h2>
+          <ul class="slider">
+            <li>
+              <h3>ポートフォリオサイト</h3>
+              <a href="#"><img src="img/works/portfolio.png" alt="showy_portfolio"></a>
+              <p>私Showy自身のポートフォリオサイトです。自然をイメージし、グリーン・ブラウンを基調としたデザインで、シンプルに仕上げました。</p>
+            </li>
+            <li>
+              <h3>デザインカンプからのコーディング</h3>
+              <a href="https://showy1.github.io/coding_digsmile/" target="_blank" rel="noopener noreferrer"><img src="img/works/coding_digsmile.png" alt="showy_coding_digsmile"></a>
+              <p>既存の.xdファイルを基にしたコーディング作品です。.xdファイルは、<a href="https://crestadesign.org/cording-third/#i-7" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>クリ★スタ様のWebサイト</a>よりお借りしました。</p>
+            </li>
+            <li>
+              <h3>オリジナルWordPressコーポレートサイト</h3>
+              <a href="https://showy1.github.io/coding_digsmile/" target="_blank" rel="noopener noreferrer"><img src="img/works/showyfcorp.png" alt="showyfcorp"></a>
+              <p>WordPressを使用し、オリジナルテーマにより、架空の自転車販売・貸し出し会社のWebサイトを制作しました。</p>
+            </li>
+          </ul>
+          <a class="btn" href="works.html">more</a>
+        </section>
 
-          <section class="contact" id="contact">
-            <h2>contact</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil illo, blanditiis atque, illum ex perspiciatis cumque, delectus corporis error odio iusto. Recusandae in, commodi nisi non sed alias nobis neque!</p>
-            <!-- <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSezJA7s9Y4gL2rp_0q0KqgcXL-Oz_3Fxh9YSuK_v3Bvr7ylRw/formResponse" target="dummyIframe">
+        <!-- <section class="skills" id="skills">
+          <h2>skills</h2>
+          <ul>
+            <li><i class="fab fa-html5 fa-7x"></i><p>HTML5</p></li>
+            <li><i class="fab fa-css3 fa-7x"></i><p>CSS3</p></li>
+            <li><i class="fab fa-sass fa-7x"></i><p>Sass</p></li>
+            <li><i class="fab fa-js-square fa-7x"></i><p>JavaScript/jQuery</p></li>
+            <li><i class="fab fa-php fa-7x"></i><p>PHP</p></li>
+            <li><i class="fab fa-wordpress fa-7x"></i><p>WordPress</p></li>
+            <li><i class="fas fa-database fa-7x"></i><p>MySQL</p></li>
+            <li><i class="fab fa-adobe fa-7x"></i><p>Photoshop/XD</p></li>
+            <li><i class="fab fa-github fa-7x"></i><p>GitHub</p></li>
+          </ul>
+        </section> -->
+
+        <section class="contact" id="contact">
+          <h2>contact</h2>
+          <div class="contact-content">
+            <div class="contact-top-message">
+              <p>お見積もりのご依頼や案件に関するご相談など、お気軽にご連絡ください。</p>
+              <p>3日以内に返信いたします。</p>
+            </div>
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSezJA7s9Y4gL2rp_0q0KqgcXL-Oz_3Fxh9YSuK_v3Bvr7ylRw/formResponse" target="dummyIframe">
               <p><label for="name">お名前</label></p>
               <p><input id="name" type="text" name="entry.2123806843" placeholder="山田太郎" required></p>
               <p><label for="email">メールアドレス</label></p>
               <p><input id="email" type="text" name="entry.1000123966" placeholder="example@mail.co.jp" required></p>
               <p><label for="msg">お問い合わせ内容</label></p>
               <p><textarea id="msg" name="entry.1322800770" placeholder="お気軽にお問い合わせください。" required></textarea></p>
-              <p><button type="submit" name="button" value="送信">送信</button></p>
-            </form> -->
+              <p id="submit"><input type="submit" class="btn" name="button" value="送信" disabled></p>
+            </form>
             <iframe name="dummyIframe"></iframe>
             <div id="thxMessage" class="modal">
               <p>お問い合わせありがとうございます。</p>
@@ -130,9 +187,11 @@
             </div>
           </div>
         </section>
-      </div>
-    </main>
 
-    <div id="footer"></div>
-  </body>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+</body>
 </html>
