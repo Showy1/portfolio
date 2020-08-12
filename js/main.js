@@ -5,15 +5,28 @@ $(function(){
   $('#header').load('include/header.html');
   $('#footer').load('include/footer.html');
 
-  // Smooth Scrolling
-  $(document).on('click', 'a[href^="#"]', function(){
-    var speed = 500;
-    var href= $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top;
-    $('html, body').animate({scrollTop:position}, speed, "swing");
-    return false;
+
+  // Loading
+  $(window).on('load', function(){
+    $('#loader').fadeOut();
   });
+
+  // Smooth Scrolling
+  if(location.pathname == '/'){
+    $(document).on('click', 'a[href^="/"]', function(){
+      var speed = 500;
+      var href = $(this).attr('href');
+
+      if(href != '/'){
+        href = href.slice(1);
+      }
+
+      var target = $(href == '/' ? 'html' : href);
+      var position = target.offset().top;
+      $('html, body').animate({scrollTop:position}, speed, 'swing');
+      return false;
+    });
+  }
 
   // Mouse Stalker
   // $('.mv').mousemove(function(e){
@@ -24,23 +37,6 @@ $(function(){
   var top = $('#top')
   top.hide();
 
-  // $(window).scroll(function (){
-  //   var scroll = $(this).scrollTop();
-  //   var windowHeight = $(this).height();
-  //
-  //   if(scroll > 100){
-  //     top.fadeIn();
-  //   }else{
-  //     top.fadeOut();
-  //   }
-  //
-  //   $('.container').find('*').each(function(){
-  //     var imgPos = $(this).offset().top;
-  //     if(scroll > imgPos - windowHeight + 50){
-  //       $(this).animate({'opacity':'1'},500);
-  //     }
-  //   });
-  // });
   $(window).on('scroll load', function (){
     var scroll = $(this).scrollTop();
     var windowHeight = $(this).height();
@@ -73,9 +69,22 @@ $(function(){
 
 
   // slick
-  $('.slider').slick({
+  var slider = $('.slider')
+
+  slider.slick({
     autoplay: true,
-    autoplaySpeed: 7000,
+    pauseOnHover: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    centerMode: true,
+    centerPadding: '10%',
+  });
+
+  slider.on('beforeChange', function(){
+    $('.slick-current').removeClass('is-active');
+  });
+  slider.on('afterChange', function(){
+    $('.slick-current').addClass('is-active');
   });
 
   // Contact Form Change
@@ -88,7 +97,7 @@ $(function(){
   $(document).on('click', '#hamburger', function(){
     $("body").addClass("show");
   })
-  $(document).on('click', '#close, a[href^="#"]', function(){
+  $(document).on('click', '#close, a[href^="/"]', function(){
     $("body").removeClass("show");
   })
 });
