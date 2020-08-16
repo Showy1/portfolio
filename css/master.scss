@@ -13,7 +13,7 @@ html{
   font-size: 62.5%;
 
   body{
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
   }
 }
@@ -299,31 +299,44 @@ main{
 
           .info{
             width: 55%;
-            margin-bottom: 30px;
 
             .introduction{
-              margin-bottom: 20px;
+              margin-bottom: 50px;
             }
           }
         }
 
         .outline{
-          margin-bottom: 50px;
-
           h3#name{
-            color: #fff;
-            mix-blend-mode: difference;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 1rem;
           }
 
           &-inner{
-            text-align: center;
-            width: 300px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.8);
-            padding-top: 35px;
-            margin-top: -35px;
-            padding-bottom: 30px;
-            border-radius: 10px;
+            position: relative;
+            width: 100%;
+
+            #outline-inner-box{
+              position: absolute;
+              z-index: 1;
+              width: 300px;
+              height: 200px;
+              margin: 0 auto;
+              background: rgba(255, 255, 255, 0.8);
+              border-radius: 50%;
+              left: 50%;
+              transform: rotate(-20deg) translate(-35%, -135px);
+              transform-origin: center center;
+            }
+
+            .text{
+              position: relative;
+              z-index: 2;
+              font-size: 2rem;
+              text-align: center;
+              margin: 0 auto;
+            }
           }
         }
 
@@ -394,7 +407,7 @@ main{
 
         .accordion_inner{
           display: none;
-          font-size: 1.8rem;
+          font-size: 1.6rem;
           margin-bottom: 50px;
 
           h3{
@@ -455,6 +468,10 @@ main{
             img{
               width: 100%;
               margin-bottom: 20px;
+            }
+
+            a, i{
+              color: $base-color;
             }
 
             p{
@@ -557,7 +574,7 @@ main{
               }
 
               input, textarea{
-                font-size: 2rem;
+                font-size: 1.8rem;
               }
 
               input[type="text"], textarea{
@@ -601,6 +618,7 @@ main{
             padding: 20px;
             margin: 0 auto;
             text-align: center;
+
             p{
               margin: 0;
             }
@@ -630,11 +648,8 @@ main{
             .profile-inner{
               .info{
                 width: 90%;
-              // dl.carrer{
-              //   width: 100%;
-              // }
+              }
             }
-          }
           }
 
           .origin{
@@ -643,8 +658,8 @@ main{
 
           #outline_clone{
             display: block;
+            margin-bottom: 80px;
           }
-
         }
 
         .service{

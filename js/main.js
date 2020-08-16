@@ -16,7 +16,6 @@ $(function(){
   switch (location.pathname){
     case '/':
     case '/portfolio/':
-    
     $(document).on('click', 'a[href^="./"]', function(){
       var speed = 500;
       var href = $(this).attr('href');
@@ -30,6 +29,7 @@ $(function(){
       $('html, body').animate({scrollTop:position}, speed, 'swing');
       return false;
     });
+    break;
   }
 
   // Mouse Stalker
@@ -101,7 +101,7 @@ $(function(){
   $(document).on('click', '#hamburger', function(){
     $("body").addClass("show");
   })
-  $(document).on('click', '#close, a[href^="/"]', function(){
+  $(document).on('click', '#close, a[href^="./"]', function(){
     $("body").removeClass("show");
   })
 });
