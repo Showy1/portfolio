@@ -12,16 +12,20 @@ $(function(){
   });
 
   // Smooth Scrolling
-  if(location.pathname == '/'){
-    $(document).on('click', 'a[href^="/"]', function(){
+  // if(location.pathname == '/'){
+  switch (location.pathname){
+    case '/':
+    case '/portfolio/':
+    
+    $(document).on('click', 'a[href^="./"]', function(){
       var speed = 500;
       var href = $(this).attr('href');
 
-      if(href != '/'){
-        href = href.slice(1);
+      if(href != './'){
+        href = href.slice(2);
       }
 
-      var target = $(href == '/' ? 'html' : href);
+      var target = $(href == './' ? 'html' : href);
       var position = target.offset().top;
       $('html, body').animate({scrollTop:position}, speed, 'swing');
       return false;
