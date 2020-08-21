@@ -636,10 +636,22 @@ main{
             padding: 20px;
             margin: 0 auto;
             text-align: center;
+            -webkit-animation: flash 1s infinite alternate;
+                    animation: flash 1s infinite alternate;
 
             p{
               margin: 0;
             }
+          }
+
+          @-webkit-keyframes flash{
+            from {border-color: #fff;}
+            to{border-color: $base-script-color;}
+          }
+
+          @keyframes flash{
+            from {border-color: #fff;}
+            to{border-color: $base-script-color;}
           }
         }
       }

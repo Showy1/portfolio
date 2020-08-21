@@ -99,7 +99,7 @@ $(function(){
 
   // Contact Form Change
   $('form').submit(function(){
-    $('button').hide();
+    $('#submit').hide();
     $('#thxMessage').fadeIn(1000);
   });
 
