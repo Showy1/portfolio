@@ -79,17 +79,23 @@ $(function(){
     autoplay: true,
     pauseOnHover: true,
     autoplaySpeed: 5000,
-    arrows: false,
+    // arrows: false,
     centerMode: true,
     centerPadding: '10%',
   });
 
+  $('#first-slide').addClass('is-active');
   slider.on('beforeChange', function(){
     $('.slick-current').removeClass('is-active');
   });
   slider.on('afterChange', function(){
     $('.slick-current').addClass('is-active');
   });
+
+  $(window).on('load resize', function(){
+    var slideHeight = $('#first-slide img').height();
+    $('.slick-prev, .slick-next').css('top', slideHeight / 2 + 'px');
+  })
 
   // Contact Form Change
   $('form').submit(function(){

@@ -379,7 +379,6 @@ main{
       }
 
       .service{
-
         ul{
           display: flex;
           justify-content: space-between;
@@ -507,6 +506,25 @@ main{
                   color: $base-script-color;
                 }
               }
+            }
+          }
+
+          .slick-prev{
+            left: 0;
+          }
+
+          .slick-next{
+            right: 0;
+          }
+
+          .slick-prev, .slick-next{
+            z-index: 1;
+            width: 120px;
+            height: 120px;
+            transform: translateY(0);
+
+            &:before{
+              font-size: 120px;
             }
           }
         }
@@ -719,10 +737,19 @@ main{
 
         .works{
           ul{
-            // width: 90%;
             li{
               h3{
                 font-size: 2.2rem;
+              }
+            }
+
+            .slick-prev, .slick-next{
+              width: 10vw;
+              height: 10vw;
+              transform: translateY(20%);
+
+              &:before{
+                font-size: 10vw;
               }
             }
           }
@@ -863,6 +890,10 @@ main{
                   display: block;
                 }
               }
+            }
+
+            .slick-prev, .slick-next{
+              transform: translateY(70px);
             }
           }
 
