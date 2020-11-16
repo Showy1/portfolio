@@ -320,13 +320,13 @@ main{
             #outline-inner-box{
               position: absolute;
               z-index: 1;
-              width: 300px;
+              width: 270px;
               height: 200px;
               margin: 0 auto;
               background: rgba(255, 255, 255, 0.8);
               border-radius: 50%;
               left: 50%;
-              transform: rotate(-20deg) translate(-35%, -135px);
+              transform: rotate(-15deg) translate(-40%, -120px);
               transform-origin: center center;
             }
 
@@ -808,6 +808,16 @@ main{
     .mv{
       height: 100vh;
       margin: 0;
+
+      &-content{
+        h1{
+          font-size: 11rem;
+        }
+
+        p{
+          font-size: 8rem;
+        }
+      }
     }
 
     &.show{
